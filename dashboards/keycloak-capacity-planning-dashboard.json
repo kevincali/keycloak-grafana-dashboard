@@ -848,13 +848,13 @@
           "type": "prometheus",
           "uid": "${DS_PROMETHEUS}"
         },
-        "definition": "label_values(namespace)",
+        "definition": "label_values({__name__=~\"keycloak_.+\"}, namespace)",
         "includeAll": false,
         "label": "namespace",
         "name": "namespace",
         "options": [],
         "query": {
-          "query": "label_values(namespace)",
+          "query": "label_values({__name__=~\"keycloak_.+\"}, namespace)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
